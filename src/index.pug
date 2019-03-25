@@ -12,36 +12,39 @@ html(lang="en")
     .wrapper
       .maincontent
         .welcome-section
-          section.hero
-            .container.hero__container
-              header.header
-                .logo ТЖ
-                .header__menu
-                  nav.nav
-                    ul.nav__list
-                      - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
-                      each item in menu
-                        li.nav__item
-                          a(href="").nav__link #{item}
-                .header__links
-                  ul.socials
-                    - var socials = ['insta', 'vk', 'github'];
-                    each item in socials
-                      li.socials__item
-                        a(href="").socials__link
-                          +icon(`${item}`, 'socials__icon')
-              .hero__content
-                .user-info
-                  .user-info__desc 
-                    p Личный сайт 
-                    p веб разработчика
-                  .user-info__name 
-                    p Татьяна 
-                    p Жевак
-              .hero__bottom-buttons
-                .scroll-down-button Скролл
-                  +icon(`scroll`, 'scroll-down__icon')
-          section.about
+          .welcome-section__img(
+          style = `background-image: url(${require(`images/content/section1.jpg`)})`
+          )
+            section.hero
+              .container.hero__container
+                header.header
+                  .logo ТЖ
+                  .header__menu
+                    nav.nav
+                      ul.nav__list
+                        - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+                        each item in menu
+                          li.nav__item
+                            a(href="").nav__link #{item}
+                  .header__links
+                    ul.socials
+                      - var socials = ['insta', 'vk', 'github'];
+                      each item in socials
+                        li.socials__item
+                          a(href="").socials__link
+                            +icon(`${item}`, 'socials__icon')
+                .hero__content
+                  .user-info
+                    .user-info__desc 
+                      p Личный сайт 
+                      p веб разработчика
+                    .user-info__name 
+                      p Татьяна 
+                      p Жевак
+                .hero__bottom-buttons
+                  .scroll-down-button Скролл
+                    +icon(`scroll`, 'scroll-down__icon')
+            section.about
             .container.about__container
               .about__left
                 .user
@@ -69,15 +72,15 @@ html(lang="en")
                 .about__ps
                   span * 
                   p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-          .triangles
-            svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
-              polygon(
-                points="0,0 0,100 1000,100"
-              )
-            svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
-              polygon(
-                points="0,100 1000,100 1000,0"
-              )
+            .triangles
+              svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(
+                  points="0,0 0,100 1000,100"
+                )
+              svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(
+                  points="0,100 1000,100 1000,0"
+                )
         section.values
           .container.values__container
             .values__title

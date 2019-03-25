@@ -19,7 +19,7 @@ module.exports = {
     require("postcss-nested"),
     require("postcss-rgb"),
     require("postcss-assets") ({
-      loadPaths: ['./src/images/content'],
+      loadPaths: ['../src/images/content'],
       cachebuster: true
     }),
     require("postcss-inline-svg")({

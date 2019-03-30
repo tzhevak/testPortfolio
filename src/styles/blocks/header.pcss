@@ -1,18 +1,31 @@
 .header {
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+    &__menu {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin: 0 20px;
+      width: 55%;
+
+      @include tablets {
+        display: none;
+    }
+  }
+
+    &__links {
+      @include phones {
+        display: none;
+      }
+    }
 }
 
 .logo {
   font-size: 36px;
   font-weight: 800;
   line-height: 30px;
-}
-
-.header__menu {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  margin: 0 20px;
 }
 

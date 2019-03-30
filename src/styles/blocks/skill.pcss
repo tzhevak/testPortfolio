@@ -1,25 +1,40 @@
-
-.skills-row__item {
-  max-width: 200px;
-  width: 100%;
+.skill {
   position: relative;
-  margin: 0 15px;
+  width: 166px;
+  height: 166px;
+
+  @include tablets {
+    width: 135px;
+    height: 135px;
+  }
 }
 
-.skill__shape {
-  width: 100%;
-}
-
-.progress__circle {
+.skill__circle {
   fill: transparent;
-}
 
-.progress__circle-under {
-    stroke-width: 7;
+  &_under {
     stroke: #eaeaea;
+    stroke-width: 5px;
+  }
+
+  &_above {
+    stroke-width: 12px;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 100;
+  }
 }
 
-.progress__circle-above {
-    stroke-width: 15;
-    stroke-dasharray: 286;
+.skill__circle-text {
+  position: absolute;
+  top: 500%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba($text-color, .5);
+  padding: 14px;
+
+  @include phones {
+    font-size: 16px;
+  }
 }

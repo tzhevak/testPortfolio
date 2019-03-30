@@ -1,5 +1,5 @@
-mixin nav
-  nav.nav
+mixin nav(classes)
+  nav(class=`${classes}`)
     ul.nav__list
       - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
       each item in menu

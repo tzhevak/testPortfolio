@@ -1,10 +1,18 @@
 .skills {
   
+  display: flex;
+  flex-direction: column;
+
+  &-wraper {
+    display: flex;
+  }
+
   @include phones {
     text-align: center;
   }
 
   &__item {
     margin-bottom: 30px;
+    margin-left: 100px;
   }
 }

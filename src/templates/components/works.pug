@@ -1,25 +1,54 @@
 script(type="text/x-template")#slider-container
   .works-slider
-    ul.works-slider__pics
-      - var pics = ['1', '2', '3'];
-      each item in pics
-        li.works-slider__full-pic(
-        style = `background-image: url(${require(`images/content/${item}.jpg`)})`
-        data-slide="1"
+    display(
+      :works="works",
+      :currentWork="currentWork",
+      :currentIndex="currentIndex"
+      @slide="handleSlide"
+    )
+    info(
+      :currentWork="currentWork"
+    )
+
+script(type="text/x-template")#slider-display
+  .works-slider__pics(:data-slide="currentIndex + 1")
+    .works-slider__pics-content
+      .works-slider__fullpic-container
+        img(:src="currentWork.photo").works-slider__fullpic
+        btns(
+          @slide="direction => $emit('slide', direction)"
         )
-        li.works-slider__full-pic.active(
-        style = `background-image: url(${require(`images/content/4.jpg`)})`
-        data-slide="1"
+        thumbs(
+          :works="works"
+          :currentWork="currentWork"
         )
-  .works-right
-    .works__skills
-      - var skill = ['HTML', 'CSS', 'Javascript'];
-      each item in skill
-        .works__skill #{item}
-          .works-right__title 
-            h3.section-title Сайт школы образования
-          .works-right__desc.simple-text
-            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-          a(href="#").works__link
-            +icon('link', 'link-icon')
-            span Посмотреть сайт
+
+script(type="text/x-template")#slider-btns
+  .works-slider__buttons
+    a(href="#" @click.prevent="$emit('slide', 'next')").works-slider__btn.works-slider__btn_next
+    a(href="#" @click.prevent="$emit('slide', 'prev')").works-slider__btn.works-slider__btn_prev
+
+script(type="text/x-template")#slider-thumbs
+  ul.works-slider__thumbs
+    li.works-slider__thumb-item(
+      v-for="work in works" :key="work.id"
+      :class="{active: currentWork.id === work.id}"
+    )
+      a.works-slider__thumb-link
+        img(:src="work.photo" alt="").works-slider__thumb
+
+script(type="text/x-template")#slider-info
+  .works-slider__data
+    tags(
+      :tagsArray="tagsArray"
+    )
+    .works-slider__title {{currentWork.title}}
+    .works-slider__desc
+      p {{currentWork.desc}}
+    .works-slider__link
+      a(:href="currentWork.link").iconed-link Посмотреть слайд
+
+script(type="text/x-template")#slider-tags
+  ul.works-slider__tags
+    li.works-slider__tag-item(v-for="tag in tagsArray")
+      .tag {{tag}}

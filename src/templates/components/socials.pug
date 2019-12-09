@@ -1,7 +1,12 @@
 mixin socials(classes)
   ul(class=`socials ${classes}`)
-    - var socials = ['insta', 'vk', 'github'];
+    - 
+      var socials = [
+        ['insta', 'https://www.instagram.com/tzh95/'],
+        ['vk', 'https://vk.com/tanya.zhevak'],
+        ['github', 'https://github.com/tzhevak'],
+      ]
     each item in socials
       li.socials__item
-        a(href="").socials__link
-          +icon(`${item}`, 'socials__icon')
+        a(href=`${item[1]}`).socials__link
+          +icon(`${item[0]}`, 'socials__icon')

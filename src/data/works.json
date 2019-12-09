@@ -1,34 +1,34 @@
 [
   {
     "id": 1,
-    "title": "Сайт школы онлайн образования",
+    "title": "The web site I created",
     "skills": "HTML, CSS, Javascript",
     "photo": "1.jpg",
-    "link": "//google.com",
-    "desc": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+    "link": "https://tzhevak.github.io/test/index.html",
+    "desc": "still working on improving this web site"
   },
   {
     "id": 2,
-    "title": "Сайт школы онлайн образования",
+    "title": "The web site I created",
     "skills": "HTML, CSS, Javascript",
     "photo": "2.jpg",
-    "link": "//yandex.ru",
-    "desc": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+    "link": "https://tzhevak.github.io/test/index.html",
+    "desc": "still working on improving this web site"
   },
   {
     "id": 3,
-    "title": "3 Сайт школы онлайн образования",
+    "title": "The web site I created",
     "skills": "HTML, CSS, Javascript",
     "photo": "3.jpg",
-    "link": "//rambler.ru",
-    "desc": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+    "link": "https://tzhevak.github.io/test/index.html",
+    "desc": "still working on improving this web site"
   },
   {
     "id": 4,
-    "title": "Сайт школы онлайн образования",
+    "title": "The web site I created",
     "skills": "HTML, CSS, Javascript",
     "photo": "4.jpg",
-    "link": "//rambler.ru",
-    "desc": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+    "link": "https://tzhevak.github.io/test/index.html",
+    "desc": "still working on improving this web site"
   }
 ]

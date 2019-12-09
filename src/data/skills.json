@@ -2,19 +2,19 @@
   {
     "skillsGroup": "Front-end",
     "skills": {
-      "HTML5": 30,
-      "CSS3": 50,
-      "Javascript": 30,
-      "Jquery и Vue.js": 30
+      "HTML5": 80,
+      "CSS3": 80,
+      "Javascript": 75,
+      "Jquery & Vue.js": 70
     }
   },
   {
-    "skillsGroup": "Workflow",
+    "skillsGroup": "Back-end and other skills",
     "skills": {
-      "GIT": 30,
-      "Terminal": 60,
-      "Gulp": 30,
-      "Webpack": 70
+      "C#": 85,
+      "NUnit": 81,
+      "DB2": 80,
+      "GIT": 86
     }
   }
 ]

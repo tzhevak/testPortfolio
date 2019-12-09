@@ -1,7 +1,7 @@
 mixin nav(classes)
   nav(class=`${classes}`)
     ul.nav__list
-      - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+      - var menu = ['Main', 'About me', 'Skills', 'Examples', 'Contact me'];
       each item in menu
         li.nav__item
           a(href="").nav__link #{item}
